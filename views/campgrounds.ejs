@@ -1,0 +1,28 @@
+<%- include("patials/header") %>
+    <div class="container">
+        <header class="jumbotron" , style="margin-top: 20px;">
+            <div class="container">
+                <h1>Welcome to Campgrounds Page</h1>
+                <p>View our hand-picked campgrounds form all over the world</p>
+                <p class="btn btn-primary btn-large">
+                    <a href="/campgrounds/new" , style="color: white;">Add a new Campground</a>
+                </p>
+            </div>
+        </header>
+        <div class="row text-center" , style="display: flex; flex-wrap: wrap;">
+            <% campgrounds.forEach(function(campground){%>
+                <div class="col-md-3 col-sm-6">
+                    <div class="img-thumbnail">
+                        <img src="<%= campground.image %>" , style="height: 150px; width: 242px;">
+
+                        <div class="figure">
+                            <h4 , style="color: grey; display: block;">
+                                <%= Object.keys(campgrounds)[0]; %>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+    <%- include("patials/footer") %>

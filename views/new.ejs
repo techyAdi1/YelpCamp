@@ -1,0 +1,10 @@
+<%- include("patials/header") %>
+    <h1>Create a New Campground</h1>
+
+    <form action="/campgrounds" method="POST">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="image" placeholder="Image url">
+        <button>Submit</button>
+    </form>
+    <a href="/campgrounds">Go Back</a>
+    <%- include("patials/footer") %>
